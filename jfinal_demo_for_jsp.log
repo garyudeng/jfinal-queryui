@@ -1,0 +1,265 @@
+
+2012-10-12 15:12:15
+[WARN]-[Thread: 23107587@qtp-4592974-2]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:12:35
+[WARN]-[Thread: 25608036@qtp-4592974-6]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:23:59
+[WARN]-[Thread: 4522514@qtp-4592974-10]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:24:48
+[ERROR]-[Thread: 7319326@qtp-4592974-13]-[com.jfinal.core.ActionHandler.handle()]: /jfinal-jquery
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:61)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:75)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:65)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	... 17 more
+Caused by: java.lang.NoClassDefFoundError: freemarker/template/Configuration
+	at com.jfinal.render.FreeMarkerRender.<clinit>(FreeMarkerRender.java:40)
+	at com.jfinal.render.RenderFactory$FreeMarkerRenderFactory.getRender(RenderFactory.java:225)
+	at com.jfinal.render.RenderFactory.getRender(RenderFactory.java:117)
+	at com.jfinal.core.Controller.render(Controller.java:835)
+	at org.gary.controller.web.WebBaseController.render(WebBaseController.java:20)
+	at org.gary.controller.web.IndexController.index(IndexController.java:26)
+	... 22 more
+Caused by: java.lang.ClassNotFoundException: freemarker.template.Configuration
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:401)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:363)
+	... 28 more
+
+2012-10-12 15:25:50
+[WARN]-[Thread: 4522514@qtp-4592974-10]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:26:27
+[WARN]-[Thread: 26122736@qtp-4592974-15]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:26:55
+[WARN]-[Thread: 4522514@qtp-4592974-10]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:35:54
+[WARN]-[Thread: 20461796@qtp-4592974-18]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:35:55
+[WARN]-[Thread: 20461796@qtp-4592974-18]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:35:56
+[WARN]-[Thread: 20461796@qtp-4592974-18]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:35:56
+[WARN]-[Thread: 19081722@qtp-4592974-17]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-12 15:35:57
+[WARN]-[Thread: 25471566@qtp-4592974-19]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /jfinal-jquery/jpg
+
+2012-10-16 09:42:43
+[ERROR]-[Thread: 17151760@qtp-10296963-5]-[com.jfinal.core.ActionHandler.handle()]: /webadmin
+java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+	at com.jfinal.plugin.activerecord.Model.getInt(Model.java:114)
+	at org.gary.controller.web.WebadminController.index(WebadminController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:75)
+	at org.gary.handler.SessionHandler.handle(SessionHandler.java:26)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:65)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:945)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:756)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+2012-10-16 09:57:38
+[WARN]-[Thread: 4346456@qtp-21177041-0]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /
+
+2012-10-16 11:21:48
+[WARN]-[Thread: 4346456@qtp-21177041-0]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /
+
+2012-10-16 11:21:51
+[WARN]-[Thread: 4346456@qtp-21177041-0]-[com.jfinal.core.ActionHandler.handle()]: Action not found: /
+
+2012-10-16 13:55:30
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: init datasource error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:198)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:136)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:768)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:136)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1203)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:98)
+	at com.jfinal.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:86)
+	at com.jfinal.core.Config.startPlugins(Config.java:76)
+	at com.jfinal.core.Config.configJFinal(Config.java:46)
+	at com.jfinal.core.JFinal.init(JFinal.java:65)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:48)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:153)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:82)
+	at com.jfinal.core.JFinal.start(JFinal.java:165)
+	at org.gary.config.SystemStart.main(SystemStart.java:78)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more
+
+2012-10-16 13:55:30
+[ERROR]-[Thread: main]-[com.alibaba.druid.pool.DruidDataSource.init()]: dataSource init error
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1116)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:348)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2391)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:198)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:136)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:768)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:136)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1203)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1257)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:405)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:581)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:577)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:78)
+	at com.jfinal.plugin.activerecord.TableInfoBuilder.buildTableInfo(TableInfoBuilder.java:36)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:98)
+	at com.jfinal.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:86)
+	at com.jfinal.core.Config.startPlugins(Config.java:76)
+	at com.jfinal.core.Config.configJFinal(Config.java:46)
+	at com.jfinal.core.JFinal.init(JFinal.java:65)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:48)
+	at org.mortbay.jetty.servlet.FilterHolder.doStart(FilterHolder.java:97)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.servlet.ServletHandler.initialize(ServletHandler.java:713)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:140)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1282)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:518)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:499)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:224)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:153)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:82)
+	at com.jfinal.core.JFinal.start(JFinal.java:165)
+	at org.gary.config.SystemStart.main(SystemStart.java:78)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:298)
+	... 45 more

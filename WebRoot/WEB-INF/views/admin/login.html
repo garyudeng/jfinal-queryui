@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script>
+function changecode(){
+	$("#codeimg").attr("src",'/jpg?id='+Math.random()*10);
+}
+function login(){
+	$form=$("#loginform");
+	var username=$("#username",$form).val();
+	var pwd=$("#pwd",$form).val();
+	var code=$("#code",$form).val();
+	if(username==''||pwd==''||code==''){
+		changecode();
+		alert("有未填写项，请完善输入！");
+	}else{
+		$.ajax({url:"${root}/webadmin/login",data:$form.serialize(),dataType:'json',
+		success:function(msg){
+		if(msg.stat==100){
+			$form=$("form");
+			$form.attr("action","${root}/webadmin");
+			$form.attr("onsubmit","");
+			$form.submit();
+		}else{
+			changecode();
+			alert(msg.msg);
+		}
+		},error:function(){changecode();alert("数据提交异常！请检查网络");}});
+	}
+}
+</script>
+<TITLE>用户登录</TITLE>
+<LINK href="/css/default.css" type=text/css rel=stylesheet>
+<LINK href="/css/xtree.css" type=text/css rel=stylesheet>
+<LINK href="/css/User_Login.css" type=text/css rel=stylesheet>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.6000.16674" name=GENERATOR>
+</HEAD>
+<BODY id=userlogin_body>
+	<DIV></DIV>
+	<form method="post" id="loginform">
+		<DIV id=user_login>
+			<DL>
+				<DD id=user_top>
+					<UL>
+						<LI class=user_top_l></LI>
+						<LI class=user_top_c></LI>
+						<LI class=user_top_r></LI>
+					</UL>
+				<DD id=user_main>
+					<UL>
+						<LI class=user_main_l></LI>
+						<LI class=user_main_c>
+							<DIV class=user_main_box>
+								<UL>
+									<LI class=user_main_text>用户名：</LI>
+									<LI class=user_main_input><INPUT class=TxtUserNameCssClass
+										type="text" id=username maxLength=20 name="username"></LI>
+								</UL>
+								<UL>
+									<LI class=user_main_text>密 码：</LI>
+									<LI class=user_main_input><INPUT class=TxtPasswordCssClass
+										id=pwd type=password name=pwd></LI>
+								</UL>
+								<UL>
+									<LI class=user_main_text>验证码：</LI>
+									<LI class=user_main_input><INPUT
+										class=TxtValidateCodeCssClass id=code type=text name=code></LI>
+									<LI><img src="/jpg" id="codeimg"
+										onclick="this.src='/jpg?id='+Math.random()*10"
+										title="点击更新验证码" width="75" height="24" /></LI>
+								</UL>
+							</DIV>
+						</LI>
+						<LI class=user_main_r><INPUT class=IbtnEnterCssClass
+							id=IbtnEnter
+							style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px"
+							onclick="login();return false;"
+							type=image src="images/user_botton.gif" name=IbtnEnter></LI>
+					</UL>
+				<DD id=user_bottom>
+					<UL>
+						<LI class=user_bottom_l></LI>
+						<LI class=user_bottom_c><SPAN style="MARGIN-TOP: 40px">
+						</SPAN></LI>
+						<LI class=user_bottom_r></LI>
+					</UL>
+				</DD>
+			</DL>
+		</DIV>
+		<SPAN id=ValrUserName style="DISPLAY: none; COLOR: red"></SPAN> <SPAN
+			id=ValrPassword style="DISPLAY: none; COLOR: red"></SPAN> <SPAN
+			id=ValrValidateCode style="DISPLAY: none; COLOR: red"></SPAN>
+		<DIV id=ValidationSummary1 style="DISPLAY: none; COLOR: red"></DIV>
+
+		<DIV></DIV>
+
+	</FORM>
+</BODY>
+</HTML>
