@@ -2,3 +2,4 @@ jdbcUrl = jdbc:mysql://127.0.0.1/myweb?characterEncoding=GBK&zeroDateTimeBehavio
 user = root
 password = gary@123
 devMode = true
+test
