@@ -51,6 +51,8 @@ public class WebadminController extends WebBaseController {
 			json.put("msg", "验证码错误");
 		}else{
 			pwd=MD5.getMD5ofStr(pwd);
+			
+			System.out.println(pwd);
 			User user= User.dao.findFirst("select * from user where login_name=? and password=?", new Object[]{username,pwd});
 			if(user!=null){
 				this.setSessionAttr("user", user);
@@ -66,4 +68,15 @@ public class WebadminController extends WebBaseController {
 		this.removeSessionAttr("user");
 		this.redirect(this.getroot()+"/webadmin");
 	}
+	
+	public void changepass(){
+		String newPass = this.getPara("newpass");
+		User user = (User)this.getSession().getAttribute("user");
+		user.set("password", MD5.getMD5ofStr(newPass));
+		User.dao.setAttrs(user).update();
+		renderText(newPass);
+	}
+	
+	
+	
 }
